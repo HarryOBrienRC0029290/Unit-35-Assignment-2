@@ -27,6 +27,8 @@ namespace Unit_35_Assignment_2
         {
             InitializeComponent();
         }
+
+        // calculates the velocity 
         private void calculateVelocity()
         {
             for (int i=1; i < table.Count; i++)
@@ -36,6 +38,7 @@ namespace Unit_35_Assignment_2
                 table[i].velocity = dh / dt;
             }
         }
+        // calculates the acceleration
         private void calculateAcceleration()
         {
             for (int i = 2; i < table.Count; i++)
@@ -45,6 +48,8 @@ namespace Unit_35_Assignment_2
                 table[i].acceleration = dv / dt;
             }
         }
+
+        // allows you to open the data and reads the data that you open  
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
@@ -98,6 +103,7 @@ namespace Unit_35_Assignment_2
 
         }
 
+        // creates and displays the velocity graph 
         private void velocityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             chart1.Series.Clear();
@@ -124,6 +130,8 @@ namespace Unit_35_Assignment_2
 
         }
 
+        // creates and displays the current graph
+
         private void currentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             chart1.Series.Clear();
@@ -148,6 +156,7 @@ namespace Unit_35_Assignment_2
             chart1.ChartAreas[0].RecalculateAxesScale();
         }
 
+        // creates and displays thr altitude graph
         private void altitudeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             chart1.Series.Clear();
@@ -172,6 +181,7 @@ namespace Unit_35_Assignment_2
             chart1.ChartAreas[0].RecalculateAxesScale();
         }
 
+        // saves the graph (updates a earlier save)
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.FileName = "";
@@ -197,6 +207,7 @@ namespace Unit_35_Assignment_2
             }
         }
 
+        // creates a new save, allowing you to save were you like.
         private void saveAsPNGToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.FileName = "";
