@@ -73,6 +73,7 @@ namespace Unit_35_Assignment_2
                     calculateVelocity();
                     calculateAcceleration();
 
+                    // checks for any errors in the data
                 }
                 catch (IOException)
                 {
